@@ -16,6 +16,7 @@
 package org.gedcomx.records;
 
 import org.codehaus.enunciate.json.JsonName;
+import org.codehaus.enunciate.qname.XmlQNameEnumRef;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.gedcomx.common.URI;
@@ -23,6 +24,7 @@ import org.gedcomx.links.HypermediaEnabledData;
 import org.gedcomx.rt.GedcomxModelVisitor;
 import org.gedcomx.rt.json.JsonElementWrapper;
 import org.gedcomx.types.FieldType;
+import org.gedcomx.types.NameType;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
@@ -47,6 +49,7 @@ public class Field extends HypermediaEnabledData {
    * @return The type of the gender.
    */
   @XmlAttribute
+  @XmlQNameEnumRef ( FieldType.class)
   public URI getType() {
     return type;
   }

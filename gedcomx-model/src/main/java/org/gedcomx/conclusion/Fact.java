@@ -16,6 +16,7 @@
 package org.gedcomx.conclusion;
 
 import org.codehaus.enunciate.json.JsonName;
+import org.codehaus.enunciate.qname.XmlQNameEnumRef;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.gedcomx.common.EvidenceReference;
@@ -82,6 +83,7 @@ public class Fact extends Conclusion implements HasDateAndPlace, HasFieldBasedEv
    * @return The type of the fact.
    */
   @XmlAttribute
+  @XmlQNameEnumRef (org.gedcomx.types.FactType.class)
   public URI getType() {
     return type;
   }
