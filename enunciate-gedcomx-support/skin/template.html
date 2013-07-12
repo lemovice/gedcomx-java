@@ -1,175 +1,220 @@
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
 <head>
+  <title data-ng-bind="page.title+' &#8212; GEDCOM X'">Template &#8212; GEDCOM X</title>
   <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="locale" content="en">
+  <meta name="allLocales" content="en-US,en">
+  <meta name="description" content="An open set of specifications for Genealogical Data Communications.">
+  <meta name="keywords" content="GEDCOM, Genealogical Data, FamilySearch, Specifications, Open Source, Standards">
 
-  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-       Remove this if you use the .htaccess -->
+  <!--[if IE 9]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <![endif]-->
+  <!--[if lt IE 9]>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!--<![endif]-->
 
-  <title>GEDCOM X: Template</title>
-  <meta name="description" content="An open project to support genealogical data communications.">
-  <meta name="author" content="">
-
-  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS: implied media="all" -->
-  <link rel="stylesheet" href="css/style.css?v=2">
-  <link rel="stylesheet" href="css/prettify.css">
-  <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.8.17.custom.css">
-  <link rel="stylesheet" href="css/xbreadcrumbs.css">
+  <link href='https://edge.fscdn.org/assets/css/bootstrap-71f400d5102a488038fc9c4cc36d2728.css' rel='stylesheet' media='screen'>
+  <link href='https://edge.fscdn.org/assets/css/responsive-166fbb8fd4a3f5207a500bdf6c2d9186.css' rel='stylesheet' media='screen'>
+  <link href='https://edge.fscdn.org/assets/css/layout/theme-engage-536b90a7352c0a0141c9cd2e1f0a89ac.css' rel='stylesheet' media='screen'>
+  <link href='https://edge.fscdn.org/assets/css/prettify-c14b4df9ff7e4abed3baa78f6adb9c55.css' rel='stylesheet' media='screen'>
+  <link href='https://edge.fscdn.org/assets/css/dev-74768da7c15d2f7d462234c6e3302080.css' rel='stylesheet' media='screen'>
+  <link href='https://edge.fscdn.org/assets/css/home-f8e74d3bea27ee70341f9120d341455f.css' rel='stylesheet' media='screen'>
 
-  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="js/libs/modernizr-1.7.min.js"></script>
+  <!--[if lte IE 8]>
+  <script src="https://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+  <script src='https://edge.fscdn.org/assets/js/html5shiv-printshiv-c42155be65838a3ecf77bfc6caf1ee7f.js'></script>
+  <![endif]-->
 
+  <script src='https://edge.fscdn.org/assets/js/jquery-1.8.2.min-cfa9051cc0b05eb519f1e16b2a6645d7.js'></script>
+  <script src='https://edge.fscdn.org/assets/js/base-d73406673f381b7f1d51f01017f5cd7d.js'></script>
 </head>
 
-<body class="home">
+<body id="pagekey__developers__home" class="env-production">
 
-  <div class="container">
-    <header>
-      <div id="header" class="column first last span-20">
-        <div id="site-name" class="column first span-5 prepend-1 append-1"><a href="Home.html">Gedcom<strong>X</strong></a></div>
-        <div id="primary" class="column span-13 last">
-          <ul class="navigation">
-            <li id="nav-about"><a href="About.html">About</a></li>
-            <li id="nav-specs"><a href="Specs.html">Specs</a></li>
-            <li id="nav-code"><a href="Developers-Guide.html">Dev</a></li>
-            <li id="nav-models"><a href="Data-Model.html">Model</a></li>
-            <li id="nav-profiles"><a href="Application-Profiles.html">API Profiles</a></li>
-            <li id="nav-community"><a href="Community.html">Community</a></li>
-            <li id="nav-faq"><a href="FAQ.html">FAQ</a></li>
+<!--[if lte IE 7]>
+<div class="browser-upgrade alert alert-error">
+  <p>
+    <strong>Attention</strong>: This site does not support the current version of your web browser. To get the best possible experience using our website we
+    recommend that you upgrade to a newer version or <a href="/browser-upgrade" class="btn btn-water btn-small">install another browser</a>.
+  </p>
+</div>
+<![endif]-->
+
+<div id="wrapper" class="container">
+  <header class="clearfix" id="global-engage-header" data-control="ddPopover" data-config='{"trigger":".mobile-actions-trigger", "target": ".mobile-actions-dd"}'>
+
+    <div class="global-pri-nav-container clearfix">
+      <h1 class="serif logo-container">
+        <a class="logo" href="http://www.gedcomx.org/" data-control="SCCustomLinkTracker" data-config='{"type": "o", "name": "lo_hdr_logo"}'>GEDCOM<span>X</span></a>
+      </h1>
+
+      <!-- iPhone view converts this to dd -->
+      <nav class="mobile-actions-dd">
+        <div class="main-nav-wrapper">
+          <ul class="main-nav unstyled clearfix notification-badges">
+            <li><a class="nav-item" href="About.html">About</a></li>
+            <li><a class="nav-item" href="Specs.html">Specs</a></li>
+            <li><a class="nav-item" href="Developers-Guide.html">Dev</a></li>
+            <li><a class="nav-item" href="Data-Model.html">Model</a></li>
+            <li><a class="nav-item" href="Application-Profiles.html">API Profiles</a></li>
+            <li><a class="nav-item" href="Community.html">Community</a></li>
+            <li><a class="nav-item" href="FAQ.html">FAQ</a></li>
           </ul>
         </div>
-        <div>
-          <ul class="xbreadcrumbs" id="breadcrumbs">
-            <li>
-              <a href="#" class="home">Namespace</a>
-              <ul>
-                <li><a href="#">ns2</a></li>
-                <li><a href="#">ns3</a></li>
-                <li><a href="#">ns4</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Elements</a>
-              <ul>
-                <li><a href="#">el2</a></li>
-                <li><a href="#">el3</a></li>
-                <li><a href="#">el4</a></li>
-              </ul>
-            </li>
-            <li class="current"><a href="#">Element</a></li>
+      </nav>
+    </div> <!-- /.global-pri-nav-container -->
+  </header>
+
+
+  <div data-ng-view="" class="app-developers">
+    <div id="main" class="container home">
+
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            Namespace
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">ns2</a></li>
+            <li><a href="#">ns3</a></li>
+            <li><a href="#">ns4</a></li>
+            <!-- dropdown menu links -->
           </ul>
+        </div>
+        <div class="btn-group">
+          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            Elements
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">el2</a></li>
+            <li><a href="#">el3</a></li>
+            <li><a href="#">el4</a></li>
+            <!-- dropdown menu links -->
+          </ul>
+        </div>
+        <div class="btn-group">
+          <a class="btn" href="#">
+            Element
+          </a>
         </div>
       </div>
-    </header>
-    <div id="main" class="column first last span-20">
+
+      <div class="home-top">
+
       <h1>Element Name</h1>
 
       <hr/>
 
       <p>Here is the description of the Element Name type.</p>
 
-      <p><a href="#">Link to the type.</a></p>
-
-      <table>
-        <tr>
-          <td align="right">Name:</td>
-          <td>label</td>
-        </tr>
-        <tr>
-          <td align="right">Namespace:</td>
-          <td>urn:somens</td>
-        </tr>
-        <tr>
-          <td align="right">QName:</td>
-          <td>{urn:somens}label</td>
-        </tr>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Namespace</th>
+            <th>Data Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>label</td>
+            <td>urn:somens</td>
+            <td><a href="#">Link to the type.</a></td>
+          </tr>
+        </tbody>
       </table>
 
       <p>Here is the description of the Type Name type.</p>
 
       <h3>Media Types</h3>
 
-      <p>Pick your favorite representation format.</p>
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#tab-xml" data-toggle="pill">XML</a></li>
+        <li><a href="#tab-json" data-toggle="pill">JSON</a></li>
+      </ul>
 
-      <div id="mediatype-selection">
-        <input type="radio" id="select-xml" name="mediatype" checked="checked"/><label for="select-xml">XML</label>
-        <input type="radio" id="select-json" name="mediatype" /><label for="select-json">JSON</label>
-      </div>
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab-xml">
+          <h3>Properties</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>name</th>
+                <th>type</th>
+                <th>occurs</th>
+                <th>description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>somenamethatissomewhatlong</td>
+                <td>list of <a href="#">xmlns:xmltype</a></td>
+                <td>0..1 (attribute)</td>
+                <td>Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. </td>
+              </tr>
+              <tr>
+                <td>somename</td>
+                <td>list of <a href="#">xmlns:xmltype</a></td>
+                <td>0..*</td>
+                <td>Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. </td>
+              </tr>
+              <tr>
+                <td>somename</td>
+                <td>list of <a href="#">xmlns:xmltype</a></td>
+                <td>n/a (value)</td>
+                <td>Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. </td>
+              </tr>
+            </tbody>
+          </table>
 
-      <div class="xml-docs">
-        <h3>Properties</h3>
-        <table>
-          <tr>
-            <th align="center">name</th>
-            <th align="center">type</th>
-            <th align="center">occurs</th>
-            <th align="center">description</th>
-          </tr>
-          <tr>
-            <td>somenamethatissomewhatlong</td>
-            <td>list of <a href="#">xmlns:xmltype</a></td>
-            <td>0..1 (attribute)</td>
-            <td>Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. </td>
-          </tr>
-          <tr>
-            <td>somename</td>
-            <td>list of <a href="#">xmlns:xmltype</a></td>
-            <td>0..*</td>
-            <td>Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. </td>
-          </tr>
-          <tr>
-            <td>somename</td>
-            <td>list of <a href="#">xmlns:xmltype</a></td>
-            <td>n/a (value)</td>
-            <td>Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. </td>
-          </tr>
-        </table>
-
-        <h3>Example</h3>
-        <pre class="prettyprint lang-xml">
+          <h3>Example</h3>
+          <pre class="prettyprint lang-xml">
 &lt;hello&gt;
 &lt;how are="you"&gt;
 &lt;doing/&gt;
 &lt;today&gt;...&lt;/today&gt;
 &lt;what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen&gt;...&lt;/what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen&gt;
 &lt;/hello&gt;
-        </pre>
-      </div>
-      <div class="json-docs">
-        <h3>Properties</h3>
-        <table>
-          <tr>
-            <th align="center">name</th>
-            <th align="center">type</th>
-            <th align="center">description</th>
-          </tr>
-          <tr>
-            <td>somenamethatissomewhatlong</td>
-            <td>array of <a href="#">xmlns:xmltype</a></td>
-            <td>Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. </td>
-          </tr>
-          <tr>
-            <td>somename</td>
-            <td>array of <a href="#">xmlns:xmltype</a></td>
-            <td>Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. </td>
-          </tr>
-          <tr>
-            <td>somename</td>
-            <td>array of <a href="#">xmlns:xmltype</a></td>
-            <td>Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. </td>
-          </tr>
-        </table>
+          </pre>
+        </div>
+        <div class="tab-pane" id="tab-json">
+          <h3>Properties</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>name</th>
+                <th>type</th>
+                <th>description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>somenamethatissomewhatlong</td>
+                <td>array of <a href="#">xmlns:xmltype</a></td>
+                <td>Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. </td>
+              </tr>
+              <tr>
+                <td>somename</td>
+                <td>array of <a href="#">xmlns:xmltype</a></td>
+                <td>Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. </td>
+              </tr>
+              <tr>
+                <td>somename</td>
+                <td>array of <a href="#">xmlns:xmltype</a></td>
+                <td>Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. Some descriptive text that will be long enough to figure out how to best format it in the table. </td>
+              </tr>
+            </tbody>
+          </table>
 
-        <h3>Example</h3>
-        <pre class="prettyprint lang-js">
+          <h3>Example</h3>
+          <pre class="prettyprint lang-js">
 {
 hello : {
   how : {
@@ -180,160 +225,137 @@ hello : {
   what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen : "..."
 }
 }
-        </pre>
+          </pre>
+        </div>
       </div>
 
       <h3>API</h3>
-      <div id="tabs">
-        <ul>
-          <li><a href="#GET">GET</a></li>
-          <li><a href="#POST">POST</a></li>
-        </ul>
-        <div id="GET">
-          <div class="xml-docs">
-            <b style="font-weight: bold">Example Request</b>
-            <pre>
+
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#rest-json" data-toggle="pill">JSON</a></li>
+        <li><a href="#rest-xml" data-toggle="pill">XML</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="rest-json">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#get-json" data-toggle="tab">GET</a></li>
+            <li><a href="#post-json" data-toggle="tab">POST</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="get-json">
+              <h4>Example Request</h4>
+              <pre>
 GET /path/to/resource
 Accept: application/xml
-              <code class="prettyprint lang-xml">
-&lt;hello&gt;
-&lt;how are="you"&gt;
-&lt;doing/&gt;
-&lt;today&gt;...&lt;/today&gt;
-&lt;what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen&gt;...&lt;/what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen&gt;
-&lt;/hello&gt;
-              </code>
-            </pre>
-          </div>
-          <div class="json-docs">
-            <b style="font-weight: bold">Example Request</b>
-            <pre>
-GET /path/to/resource
-Accept: application/xml
-              <code class="prettyprint lang-js">
+                <code class="prettyprint lang-js">
 {
-  hello : {
-    how : {
-      are : "you"
-    },
-    doing = {},
-    today : "...",
-    what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen : "..."
-  }
+hello : {
+how : {
+are : "you"
+},
+doing = {},
+today : "...",
+what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen : "..."
 }
-              </code>
-            </pre>
-          </div>
-        </div>
-        <div id="POST">
-          <div class="xml-docs">
-            <b style="font-weight: bold">Example Request</b>
-            <pre>
-POST /path/to/resource
-Content-Type: application/xml
-              <code class="prettyprint lang-xml">
-&lt;hello&gt;
-&lt;how are="you"&gt;
-&lt;doing/&gt;
-&lt;today&gt;...&lt;/today&gt;
-&lt;what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen&gt;...&lt;/what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen&gt;
-&lt;/hello&gt;
-              </code>
-            </pre>
-          </div>
-          <div class="json-docs">
-            <b style="font-weight: bold">Example Request</b>
-            <pre>
+}
+                </code>
+              </pre>
+            </div>
+            <div class="tab-pane" id="post-json">
+              <h4>Example Request</h4>
+              <pre>
 POST /path/to/resource
 Content-Type: application/json
-              <code class="prettyprint lang-js">
+                <code class="prettyprint lang-js">
 {
-  hello : {
-    how : {
-      are : "you"
-    },
-    doing = {},
-    today : "...",
-    what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen : "..."
-  }
+hello : {
+how : {
+are : "you"
+},
+doing = {},
+today : "...",
+what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen : "..."
 }
-              </code>
-            </pre>
+}
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="rest-xml">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#get-xml" data-toggle="tab">GET</a></li>
+            <li><a href="#post-xml" data-toggle="tab">POST</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="get-xml">
+              <h4>Example Request</h4>
+              <pre>
+GET /path/to/resource
+Accept: application/xml
+                <code class="prettyprint lang-xml">
+&lt;hello&gt;
+&lt;how are="you"&gt;
+&lt;doing/&gt;
+&lt;today&gt;...&lt;/today&gt;
+&lt;what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen&gt;...&lt;/what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen&gt;
+&lt;/hello&gt;
+                </code>
+              </pre>
+            </div>
+            <div class="tab-pane" id="post-xml">
+              <h4>Example Request</h4>
+              <pre>
+POST /path/to/resource
+Content-Type: application/xml
+                <code class="prettyprint lang-xml">
+&lt;hello&gt;
+&lt;how are="you"&gt;
+&lt;doing/&gt;
+&lt;today&gt;...&lt;/today&gt;
+&lt;what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen&gt;...&lt;/what_happens_if_there_is_an_element_that_wraps_off_the_edge_of_the_screen&gt;
+&lt;/hello&gt;
+                </code>
+              </pre>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-
-      <div class="clear" />
-    </div>
-    <footer>
-      <div id="footer">
-        Last Modified: <strong>{{page.date}}</strong> by <strong>{{page.author}}</strong><br/><br/>
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br />
-        Copyright &copy; <script type="text/javascript" language="javascript">d = new Date;document.write(d.getFullYear());</script> <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Intellectual Reserve, Inc.</span><br/>
-        Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br/><br/>
-        <img src="img/cloudbees.png" width="96"/>
       </div>
-    </footer>
-  </div> <!--! end of #container -->
-
-  <div id="edit-button">
-    <a href="Home.html">edit this page</a>
+    </div>
   </div>
 
-  <!-- JavaScript at the bottom for fast page loading -->
+  <div id="push"></div>
+</div>
 
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
-  <script>window.jQuery || document.write("<script src='js/libs/jquery-1.6.2.min.js'>\x3C/script>")</script>
+<footer class="container muted" style="text-align: center">
+  <p>Last Modified: <strong>{{page.date}}</strong> by <strong>{{page.author}}</strong></p>
+  <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a></p>
+  <p>Copyright &copy; <script type="text/javascript" language="javascript">d = new Date;document.write(d.getFullYear());</script> <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Intellectual Reserve, Inc.</span></p>
+  <p>Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+  <img src="img/cloudbees.png" width="96"/>
+</footer>
 
-  <!--jquery ui-->
-  <script src="js/libs/jquery-ui.js"></script>
-  <script>
-    $(function() {
-      $( "#mediatype-selection" ).buttonset();
-      $( "#tabs" ).tabs();
-      $( ".json-docs" ).hide();
-      $( "#select-xml" ).click( function() {
-        $( ".json-docs" ).hide();
-        $( ".xml-docs" ).show();
-      })
-      $( "#select-json" ).click( function() {
-        $( ".xml-docs" ).hide();
-        $( ".json-docs" ).show();
-      })
-    });
-  </script>
+<div id="edit-button">
+  <a href="Home.html">edit this page</a>
+</div>
 
-  <!--xbreadcrumbs-->
-  <script src="js/libs/xbreadcrumbs.js"></script>
-  <script>
-    $(function() {
-      $('#breadcrumbs').xBreadcrumbs();
-    });
-  </script>
+<script src='https://edge.fscdn.org/assets/js/bootstrap-09c81293918e1c72e759b94586827d64.js'></script>
+<script src='https://edge.fscdn.org/assets/js/prettify-min-d435ff18c832044c3ddf7a0cf826eb72.js'></script>
+<script type="text/javascript">
+  $(function () {
+    prettyPrint();
+  });
 
-  <!-- prettify code blocks. see http://code.google.com/p/google-code-prettify/ -->
-  <script src="js/libs/prettify/prettify.js"></script>
-  <script>
-    $(function() {
-      prettyPrint();
-    });
-  </script>
-
-  <!--[if lt IE 7 ]>
-    <script src="js/libs/dd_belatedpng.js"></script>
-    <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
-  <![endif]-->
-
-  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
-  <script>
-    var _gaq=[["_setAccount","UA-11976408-2"],["_trackPageview"]];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+  var _gaq=[["_setAccount","UA-11976408-2"],["_trackPageview"]];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
     g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
     s.parentNode.insertBefore(g,s)}(document,"script"));
-  </script>
+</script>
 
 </body>
 </html>
